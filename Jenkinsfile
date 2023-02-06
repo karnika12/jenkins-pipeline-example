@@ -8,14 +8,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'node --version'
+                sh 'nodejs --version'
                 sh 'npm install'
                 sh 'gulp lint'
             }
         }
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'nodejs --version'
                 sh 'gulp test'
             }
         }
