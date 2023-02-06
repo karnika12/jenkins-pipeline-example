@@ -3,19 +3,19 @@
 pipeline {
     agent any
     tools {
-        nodejs 'node-8.1.3'
+        node 'node-19.6.0'
     }
     stages {
         stage('Build') {
             steps {
-                sh 'nodejs --version'
+                sh 'node --version'
                 sh 'npm install'
                 sh 'gulp lint'
             }
         }
         stage('Test') {
             steps {
-                sh 'nodejs --version'
+                sh 'node --version'
                 sh 'gulp test'
             }
         }
